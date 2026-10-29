@@ -1,0 +1,9 @@
+2026-10-29 13:15:10 [main] INFO  base.BaseClass - Log file is cleaned: logs/automation.log
+2026-10-29 13:15:19 [main] INFO  base.BaseClass - Test case automating with : chrome
+2026-10-29 13:15:23 [main] INFO  testCases.registration.TC001_RegisterUserTest - --------Starting TC001_RegisterUserTest--------
+2026-10-29 13:15:27 [main] INFO  testCases.registration.TC001_RegisterUserTest - Verifying Register Menu
+2026-10-29 13:15:29 [main] INFO  testCases.registration.TC001_RegisterUserTest - Verifying continue With Google Button
+2026-10-29 13:15:29 [main] INFO  testCases.registration.TC001_RegisterUserTest - Verifying continue With Email button
+2026-10-29 13:15:29 [main] INFO  testCases.registration.TC001_RegisterUserTest - Verifying go to Home button
+2026-10-29 13:15:30 [main] INFO  testCases.registration.TC001_RegisterUserTest - Verifying sign in button
+2026-10-29 13:15:30 [main] INFO  testCases.registration.TC001_RegisterUserTest - --------Finished TC001_RegisterUserTest--------

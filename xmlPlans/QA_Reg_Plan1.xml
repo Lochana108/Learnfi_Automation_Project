@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="QA_Reg_paln1" >
+    
+    <listeners>
+        <listener class-name="utilities.extentReport.ExtentReportListnerManager"></listener>
+    </listeners>
+
+    <test name="TC001_RegisterUserTest">
+        <classes>
+            <class name="testCases.registration.TC001_RegisterUserTest" />
+        </classes>
+    </test>
+</suite>
