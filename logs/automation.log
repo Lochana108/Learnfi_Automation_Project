@@ -1,9 +1,129 @@
-2026-10-29 13:15:10 [main] INFO  base.BaseClass - Log file is cleaned: logs/automation.log
-2026-10-29 13:15:19 [main] INFO  base.BaseClass - Test case automating with : chrome
-2026-10-29 13:15:23 [main] INFO  testCases.registration.TC001_RegisterUserTest - --------Starting TC001_RegisterUserTest--------
-2026-10-29 13:15:27 [main] INFO  testCases.registration.TC001_RegisterUserTest - Verifying Register Menu
-2026-10-29 13:15:29 [main] INFO  testCases.registration.TC001_RegisterUserTest - Verifying continue With Google Button
-2026-10-29 13:15:29 [main] INFO  testCases.registration.TC001_RegisterUserTest - Verifying continue With Email button
-2026-10-29 13:15:29 [main] INFO  testCases.registration.TC001_RegisterUserTest - Verifying go to Home button
-2026-10-29 13:15:30 [main] INFO  testCases.registration.TC001_RegisterUserTest - Verifying sign in button
-2026-10-29 13:15:30 [main] INFO  testCases.registration.TC001_RegisterUserTest - --------Finished TC001_RegisterUserTest--------
+2026-11-03 10:49:37 [main] INFO  base.BaseClass - Log file is cleaned: logs/automation.log
+2026-11-03 10:49:43 [main] INFO  base.BaseClass - Test case automating with : chrome
+2026-11-03 10:49:49 [main] INFO  testCases.registration.TC001_RegisterUserTest - --------Starting TC001_RegisterUserTest--------
+2026-11-03 10:49:59 [main] INFO  testCases.registration.TC001_RegisterUserTest - Verifying Register Menu
+2026-11-03 10:49:59 [main] INFO  actionDriver.ActionDriver - Current URL fetched: https://learnfi.lk/auth/register
+2026-11-03 10:49:59 [main] INFO  testCases.registration.TC001_RegisterUserTest - Verifying continue With Google Button
+2026-11-03 10:49:59 [main] INFO  testCases.registration.TC001_RegisterUserTest - Verifying continue With Email button
+2026-11-03 10:50:00 [main] INFO  testCases.registration.TC001_RegisterUserTest - Verifying go to Home button
+2026-11-03 10:50:00 [main] INFO  testCases.registration.TC001_RegisterUserTest - Verifying sign in button
+2026-11-03 10:50:00 [main] INFO  testCases.registration.TC001_RegisterUserTest - --------Finished TC001_RegisterUserTest--------
+2026-11-03 10:50:06 [main] INFO  base.BaseClass - Test case automating with : chrome
+2026-11-03 10:50:16 [main] INFO  actionDriver.ActionDriver - Current URL fetched: https://learnfi.lk/auth/login
+2026-11-03 10:50:23 [main] INFO  base.BaseClass - Test case automating with : chrome
+2026-11-03 10:50:33 [main] INFO  actionDriver.ActionDriver - Current URL fetched: https://learnfi.lk/auth/login
+2026-11-03 10:50:46 [main] ERROR actionDriver.ActionDriver - Expected URL was not reached: https://learnfi.lk/home
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to be "https://learnfi.lk/home". Current url: "https://learnfi.lk/auth/login"
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: '4.50.0', revision: 'be845fb be845fb44341cd7a6e7b27ba02dc1bdcf69dc51c'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 156.0.8078.74, chrome: {chromedriverVersion: 156.0.8078.80 (fb096c0011f9..., userDataDir: C:\Users\malsh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57985}, goog:processID: 17852, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57985/devtoo..., se:cdpVersion: 156.0.8078.74, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3908fb85b99f57259095e954c43bfcb4
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actionDriver.ActionDriver.waitForURL(ActionDriver.java:45)
+	at testCases.registration.TC001_RegisterUserTest.verifyingSignInFunctionality(TC001_RegisterUserTest.java:66)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+2026-11-03 10:50:48 [main] INFO  base.BaseClass - Test case automating with : chrome
+2026-11-03 10:50:56 [main] INFO  actionDriver.ActionDriver - Current URL fetched: https://learnfi.lk/auth/login
+2026-11-03 10:51:09 [main] ERROR actionDriver.ActionDriver - Expected URL was not reached: https://learnfi.lk/home
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to be "https://learnfi.lk/home". Current url: "https://learnfi.lk/auth/login"
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: '4.50.0', revision: 'be845fb be845fb44341cd7a6e7b27ba02dc1bdcf69dc51c'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 156.0.8078.74, chrome: {chromedriverVersion: 156.0.8078.80 (fb096c0011f9..., userDataDir: C:\Users\malsh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63433}, goog:processID: 18752, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63433/devtoo..., se:cdpVersion: 156.0.8078.74, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: efa2564533b68e2bb11805588d731e85
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actionDriver.ActionDriver.waitForURL(ActionDriver.java:45)
+	at testCases.registration.TC001_RegisterUserTest.verifyingSignInFunctionality(TC001_RegisterUserTest.java:66)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+2026-11-03 10:51:11 [main] INFO  base.BaseClass - Test case automating with : chrome
+2026-11-03 10:51:19 [main] INFO  actionDriver.ActionDriver - Current URL fetched: https://learnfi.lk/auth/login
+2026-11-03 10:51:31 [main] ERROR actionDriver.ActionDriver - Expected URL was not reached: https://learnfi.lk/home
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to be "https://learnfi.lk/home". Current url: "https://learnfi.lk/auth/login"
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: '4.50.0', revision: 'be845fb be845fb44341cd7a6e7b27ba02dc1bdcf69dc51c'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 156.0.8078.74, chrome: {chromedriverVersion: 156.0.8078.80 (fb096c0011f9..., userDataDir: C:\Users\malsh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50652}, goog:processID: 4784, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50652/devtoo..., se:cdpVersion: 156.0.8078.74, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5a8fa0b4b898cd80745f2ceb5eee2259
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actionDriver.ActionDriver.waitForURL(ActionDriver.java:45)
+	at testCases.registration.TC001_RegisterUserTest.verifyingSignInFunctionality(TC001_RegisterUserTest.java:66)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)

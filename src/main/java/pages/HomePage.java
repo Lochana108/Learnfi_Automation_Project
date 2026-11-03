@@ -25,7 +25,7 @@ public class HomePage {
         return actionDriver.isDisplayed(signUp);
     }
 
-    public void signIn(){
+    public void signUp(){
         actionDriver.click(signUp);
     }
 }

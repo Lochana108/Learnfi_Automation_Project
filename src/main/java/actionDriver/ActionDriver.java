@@ -1,5 +1,6 @@
 package actionDriver;
 
+import base.BaseClass;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -7,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.PropertyFileReader;
+import utilities.extentReport.ExtentReportUtility;
 
 import java.time.Duration;
 import java.util.Set;
@@ -36,6 +38,15 @@ public class ActionDriver {
        } catch (Exception e) {
            logger.error("element is not visible : "+e.getMessage());
        }
+    }
+
+    public boolean waitForURL(String expectedURL){
+        try{
+            return wait.until(ExpectedConditions.urlToBe(expectedURL));
+        } catch (Exception e) {
+            logger.error("Expected URL was not reached: " + expectedURL, e);
+            return false;
+        }
     }
 
     public boolean isDisplayed(WebElement element){
@@ -87,6 +98,18 @@ public class ActionDriver {
             logger.error("Unable to switch window ",e);
         }
     }
+    public String getCurrentURL() {
+        try {
+            String url = driver.getCurrentUrl();
+            ExtentReportUtility.logStep("Current URL fetched: " + url);
+            logger.info("Current URL fetched: " + url);
+            return url;
+        } catch (Exception e) {
+            ExtentReportUtility.logFailure(BaseClass.getDriver(), "Unable to fetch current URL", "get_current_url_failed");
+            logger.error("Unable to fetch current URL: " + e.getMessage());
+            return null;
+        }
+    }
 
     public void switchToFrameByElement(WebElement element){
         try {
@@ -95,5 +118,16 @@ public class ActionDriver {
             logger.error("Unale to switch to iframe ",e);
         }
     }
+
+    public void setInputField(WebElement element,String value){
+        try{
+            waitForElementToBeVisible(element);
+            element.clear();
+            element.sendKeys(value);
+        } catch (Exception e) {
+            logger.error("Unable to enter text", e);
+        }
+    }
+
 
 }

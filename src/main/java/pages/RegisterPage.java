@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import utilities.PropertyFileReader;
 
 public class RegisterPage {
 
@@ -34,8 +35,8 @@ public class RegisterPage {
     @FindBy(xpath = "//span[normalize-space()='Sign in']")
     public WebElement SignIn;
 
-    @FindBy(xpath = "//span[normalize-space()='Choose an account']")
-    public WebElement chooseAnAccount;
+    @FindBy(xpath = "//span[normalize-space()='Sign in']")
+    public WebElement signInText;
 
     @FindBy(xpath = "//div[@data-identifier='deshanlochana2@gmail.com']")
     public WebElement account;
@@ -45,6 +46,12 @@ public class RegisterPage {
 
     @FindBy(xpath = "//div[@class='_googleLoginOverlay_k9pwi_45']")
     public WebElement actualGoogleButton;
+
+    @FindBy(xpath = "//input[@id='identifierId']")
+    public WebElement emailOrPhone;
+
+    @FindBy(xpath = "//button//span[normalize-space()='Next']")
+    public WebElement nextBtn;
 
     public String registerMenu(){
         return actionDriver.getText(text);
@@ -69,11 +76,21 @@ public class RegisterPage {
     public String clickContinueWithGoogle(){
         //actionDriver.switchToFrameByElement(googleButtonFrame);
         actionDriver.switchToWindow(actualGoogleButton);
-        return actionDriver.getText(chooseAnAccount);
+        return actionDriver.getText(signInText);
     }
 
     public void selectGoogleAccount(String email) {
         actionDriver.click(account);
 
     }
+
+    public void setEmailOrPhone(String email){
+        actionDriver.setInputField(emailOrPhone,email);
+        actionDriver.click(nextBtn);
+    }
+
+    public void signIn(){
+        actionDriver.click(SignIn);
+    }
+
 }

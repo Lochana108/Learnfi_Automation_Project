@@ -44,19 +44,28 @@ public class ExtentReportUtility {
 
     public static void captureScreenshotAsBase64_StepInfo(WebDriver driver,String message){
         String base64 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BASE64);
-        test.info(message, MediaEntityBuilder.createScreenCaptureFromBase64String(base64).build());
+        getTest().info(message, MediaEntityBuilder.createScreenCaptureFromBase64String(base64).build());
     }
 
     public static void captureScreenshotAsBase64_FailCase(WebDriver driver,String message){
         String base64 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BASE64);
-        test.fail(message,MediaEntityBuilder.createScreenCaptureFromBase64String(base64).build());
+        getTest().fail(message,MediaEntityBuilder.createScreenCaptureFromBase64String(base64).build());
     }
 
     public static void captureScreenshotAsBase64_SkipCase(WebDriver driver,String message){
         String base64 = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BASE64);
-        test.skip(message,MediaEntityBuilder.createScreenCaptureFromBase64String(base64).build());
+        getTest().skip(message,MediaEntityBuilder.createScreenCaptureFromBase64String(base64).build());
     }
 
+    public static void logStep(String logMessage) {
+        getTest().info(logMessage);
+    }
+
+    public static void logFailure(WebDriver driver, String logMessage, String screenShotMessage) {
+        //String colorMessage = String.format("<span style='color:red;'>%s</span>", logMessage);
+        getTest().fail(logMessage);
+        captureScreenshotAsBase64_FailCase(driver,screenShotMessage);
+    }
 
 
 }
